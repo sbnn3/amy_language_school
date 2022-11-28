@@ -104,12 +104,6 @@
             {% include 'includes/main-nav.html' %}
           </nav>
         </div>
-
-        <div id="delivery-banner" class="row text-center">
-          <div class="col bg-black text-white">
-              <h4 class="logo-font my-1">DISCOUNT TEXT(LOADING) €{{ free_shipping_threshold }}!</h4>                
-          </div>            
-      </div>
     </header>
 
     {% if messages %}
@@ -125,6 +119,8 @@
     {% block postloadjs %}
     {% endblock %}
     
-
+    <footer class="footer mt-auto py-3 bg-black">
+      Loading....
+    </footer>
   </body>
 </html>
