@@ -13,9 +13,16 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'courses' %}" id="courses-link" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="" id="courses-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Courses
             </a>
+            <div class="dropdown-menu border-0" aria-labelledby="courses-link">
+                <a href="{% url 'courses' %}?category=beginner" class="dropdown-item">Beginner Level</a>
+                <a href="{% url 'courses' %}?category=intermediate" class="dropdown-item">Intermediate Level</a>
+                <a href="{% url 'courses' %}?category=advanced" class="dropdown-item">Advanced Level</a>
+                <a href="{% url 'courses' %}?category=business" class="dropdown-item">Business Level</a>
+                <a href="{% url 'courses' %}?category=beginner,intermediate,advanced,business" class="dropdown-item">All Courses</a>
+            </div>
         </li>
 
         <li class="nav-item dropdown">
