@@ -97,6 +97,53 @@
             </div>
         </div>
     </div>
+
+    <div class="container">
+        {% if course.reviews %}
+        <div class="row mb-4">
+            <hr>
+            <h2>Reviews</h2>
+            <hr>
+        {% endif %}
+        </div>
+
+        <div class="row justify-content-center">
+            {% for review in course.reviews.all %}
+                {% if review.approved %}
+                    <div class="col-lg-6 text-center mb-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3>{{ review.title }}</h3>
+                                <p>{{ review.content }}</p>
+                                {% if review.user == user %}
+                                    <p>Written by: {{ review.user }}</p>
+
+                                    <a href="">Edit</a>
+                                    <a onclick="return confirm('Are you sure you want to delete the review? This action is PERMANENT!');"
+                                        class="text-danger" href="">Delete</a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+
+        <div class="row justify-content-center">
+            <div class="ml-4 mr-4 col-lg-8 pt-5 allauth-form-inner-content">
+                {% if user.is_authenticated %}
+                    <h2>Add a review</h2>
+                    <p>If you have purchased this pack of lessons in the past then please, leave a review for us. Admin will verify your purchase before approval.</p>
+                    <form method="POST">
+                        {{ form | crispy }}
+                        {% csrf_token %}
+                        <button class="btn btn-outline-info mb-5" type="submit">Submit Review</button>
+                    </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
 {% endblock %}
 
 {% block postloadjs %}

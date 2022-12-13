@@ -4,8 +4,8 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Course, Category
-from .forms import CourseForm
+from .models import Course, Category, CourseReview
+from .forms import CourseForm, CourseReviewForm
 
 
 def all_courses(request):
@@ -138,3 +138,44 @@ def delete_course(request, course_id):
     course.delete()
     messages.success(request, 'Course has been deleted!')
     return redirect(reverse('courses'))
+
+
+def edit_review(request, review_id):
+    """
+    Edit a course review
+    """
+    review = get_object_or_404(CourseReview, id=review_id)
+    course = get_object_or_404(Course, pk=review.course.id)
+    form = CourseReviewForm(instance=review)
+
+    if request.method == 'POST':
+        form = CourseReviewForm(request.POST, request.FILES, instance=review)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Review has been successfully edited!')
+            context = {
+                'course': course,
+                'review': review,
+                'form': form,
+            }
+            return redirect('course_detail', review.course.id)
+        else:
+            messages.error(request, 'Failed to add the review. Please, make sure the form is valid!')
+            
+            form = CourseReviewForm(instance=review)
+            context = {
+                'course': course,
+                'review': review,
+                'form': form,
+            }
+    else:
+        form = CourseReviewForm(instance=review)
+        messages.info(request, f'You are editing {review.title}')
+        context = {
+            'course': course,
+            'review': review,
+            'form': form,
+        }
+        return render(request, 'courses/course_detail.html', context)
+
+    return render(request, 'courses/course_detail.html', context)
