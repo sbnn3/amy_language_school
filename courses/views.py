@@ -72,7 +72,16 @@ def add_course(request):
     """
     Add a course to the store
     """
-    form = CourseForm()
+    if request.method == 'POST':
+        form = CourseForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added course!')
+            return redirect(reverse('add_course'))
+        else:
+            messages.error(request, 'Failed to add a new course. Please, make sure the form is valid!')
+    else:
+        form = CourseForm()
     template = 'courses/add_course.html'
     context = {
         'form': form,
