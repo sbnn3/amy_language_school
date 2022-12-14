@@ -59,14 +59,32 @@ def all_courses(request):
 
 def course_detail(request, course_id):
     """ A view to show individual course details """
-
     course = get_object_or_404(Course, pk=course_id)
+    form = CourseReview
 
-    context = {
-        'course': course,
-    }
+    if request.method == 'POST':
+        form = CourseReviewForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.instance.user = request.user
+            form.instance.course = course
+            form.save()
+            messages.success(request, 'Your review has been sent to Admin for approval!')
+            context = {
+                'course': course,
+                'form': form,
+            }
 
+            return render(request, 'courses/course_detail.html', context)
+        else:
+            messages.error(request, 'Failed to add the review. Please, make sure the form is valid!')
+    else:
+        form = CourseReviewForm()
+        context = {
+                'course': course,
+                'form': form,
+            }
     return render(request, 'courses/course_detail.html', context)
+
 
 @login_required
 def add_course(request):
@@ -140,6 +158,24 @@ def delete_course(request, course_id):
     return redirect(reverse('courses'))
 
 
+@login_required
+def delete_review(request, review_id, ):
+    """
+    Delete the course review
+    """
+    review = get_object_or_404(CourseReview, id=review_id)
+
+    if request.user == review.user:
+        review.delete()
+        messages.success(request, 'The review has been deleted!')
+
+        return redirect('course_detail', review.course.id)
+    else:
+        messages.error(request, 'Failed to delete the review. Please, make sure that you have permission!')
+
+    return redirect('course_detail', review.course.id)
+
+
 def edit_review(request, review_id):
     """
     Edit a course review
@@ -170,7 +206,7 @@ def edit_review(request, review_id):
             }
     else:
         form = CourseReviewForm(instance=review)
-        messages.info(request, f'You are editing {review.title}')
+        messages.info(request, f'You are editing "{review.title}"')
         context = {
             'course': course,
             'review': review,
