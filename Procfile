@@ -1,0 +1,1 @@
+web: gunicorn amy_ls.wsgi:application
