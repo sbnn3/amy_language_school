@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+ <div class="container header-container">
+    <div class="row">
+        <div class="col">
+        </div>
+    </div>
+ </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h2 class="logo-font">Blog Posts</h2>
+                <hr class="w-50 mb-1">
+            </div>
+        </div>
+
+            <div class="row mb-2">
+                {% for post in posts %}
+                    <div class="col-md-6">
+                        <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="col p-4 d-flex flex-column position-static">
+                                <strong class="d-inline-block mb-2 text-primary">{{ post.category }}</strong>
+                                <h4 class="mb-2">{{ post.title }}</h4>
+                                <div class="mb-2 text-muted">{{ post.timestamp }}</div>
+                                <p class="card-text mb-auto">{{ post.overview }}</p>
+                                <a href="{% url 'post' post.slug %}" class="stretched-link">Read the article</a>
+                            </div>
+                            <div class="col-auto d-none d-lg-block">
+                                <img width="200" height="250" object-fit="cover" src="{{ MEDIA_URL }}{{ post.image }}" 
+                                    alt="{{ post.title }}">
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+{% endblock content %}

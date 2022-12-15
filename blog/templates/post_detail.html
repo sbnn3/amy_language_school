@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+ <div class="container header-container">
+    <div class="row">
+        <div class="col">
+        </div>
+    </div>
+ </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h2 class="logo-font">{{ post.title }}</h2>
+                <hr class="w-50 mb-1">
+            </div>
+        </div>
+
+        <div class="col-lg-4 mt-5">
+            <img class="center" width="500vw" height="500vh" object-fit="cover" src="{{ MEDIA_URL }}{{ post.image }}" 
+                alt="{{ post.title }}">
+        </div>
+        <div class="row ml-3 mr-3 mb-3">
+            <div class="col-lg-8 mt-5">
+                Added by: <a class="mb-2" href="#">{{ post.author }}</a><br>
+                <p>{{ post.timestamp }}</p><br>
+                <p>{{ post.content }}</p><br>
+            </div>
+        </div>
+{% endblock content %}
