@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+ <div class="container header-container">
+    <div class="row">
+        <div class="col">
+        </div>
+    </div>
+ </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h2 class="logo-font">About Us</h2>
+                <hr class="w-50 mb-1">
+            </div>
+        </div>
+        <div class="col about-pg">
+            <div class="row">
+                <div class="col-md-8 ">
+                    <img width="850" height="450" src="/media/ed-img.jpg" alt="World of Knowledge">
+                </div>
+                <br>
+                <div class="col-md-4">
+                    <p>Welcome to <span>AMY</span><span>Language School </span>
+                    <br/>
+                        Here you will be able to study new things daily and learn to speak English at the highest level.
+                    </p>
+                    <p>
+                        AMY Language School is a new school in the industry, so we are learning how to be the best.
+                    </p>
+                    </br/>
+                    <p>
+                        If you want to see all our available courses, please access <a href="{% url 'courses' %}">courses</a> for all the latest updates.
+                    </p>
+                    <p>
+                        If you want to see what's new happening in blog section, please access <a href="{% url 'allposts' %}">blog</a> for all the latest updates.
+                    </p>
+                    <br/>
+                    <p>
+                        If you would like to contact us, please do it <a href="{% url 'contact' %}">here</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+{% endblock content %}
