@@ -172,6 +172,20 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
+.social_network {
+    text-align: center;
+}
+
+.social_network li {
+    display: inline;
+}
+
+.social_network i {
+    font-size: xx-large;
+    padding: 6px;
+    color: #17a2b8;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
