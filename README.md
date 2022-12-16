@@ -1,108 +1,265 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **Amy Language School**
+<p>
+Amy Language School is a place where every single person needs to be. Founded in 2022, based in Dublin Ireland.<br>
+The most creative language school that provide high quality services for students and potential students.<br>
+Our available courses, reviews and blog section will confirm that we are new but not the lasts.<br>
+This website is for educational purposes only and the credit card payment functionality is not set up to accept real payment. <br>
+<strong>Please, see below the card details accepted:</strong><br>
 
-Welcome sbnn3,
+![Responsive](/media/readme/card-details.png "Card Details")<hr>
+<ul>
+    <li>4242 4242 4242 4242 <strong>(Visa)</strong></li>
+    <li>Expiration date: 04/24</li>
+    <li>CVN: 242</li>
+    <li>Postcode: 42424</li>
+</ul><hr>
+</p><br>
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+# **Showcase**
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+![Responsive](/media/readme/responsive-design.png "Responsive Design")<hr>
 
-## Gitpod Reminders
+<p>The live link for Amy Language School can be found <a href="https://amy-language-school.herokuapp.com/">here</a> :)</p><hr>
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+# **Table of Content**
+<ul>
+<li><a href="#ux">UX</a></li>
+<li><a href="#user-stories">User Stories</a></li>
+<li><a href="#design">Design</a></li>
+<li><a href="#features">Features</a></li>
+<li><a href="#testing">Testing</a></li>
+<li><a href="#unfixed-bugs">Unfixed Bugs</a></li>
+<li><a href="#technologies-user">Technologies User</a></li>
+<li><a href="#deployment">Deployment</a></li>
+<li><a href="#credits">Credits</a></li>
+<ul><hr>
 
-`python3 -m http.server`
+# **UX**
+### **User Stories**<hr>
+<p>You can view the kanban board <a href="https://github.com/users/sbnn3/projects/11">here</a> and issues page <a href="https://github.com/sbnn3/amy_language_school/issues">here</a>.</p><hr>
 
-A blue button should appear to click: _Make Public_,
+### **Admin**<hr>
+<ul>
+    <li>As an admin, i want a panel to add new courses.</li>
+    <li>As an admin, i want a panel to edit available courses.</li>
+    <li>As an admin, i want a panel to delete courses.</li>
+    <li>As an admin, i want a panel to create a blog post.</li>
+    <li>As an admin, i want a panel to edit a blog post.</li>
+    <li>As an admin, i want a panel to delete a blog post.</li>
+    <li>As an admin, i can use the superuser priviliges.</li>
+</ul><hr>
 
-Another blue button should appear to click: _Open Browser_.
+### **User**<hr>
+<ul>
+    <li>As a site user, I can view all available courses and select one that suits me.</li>
+    <li>As a site user, i would like to view details for every course available.</li>
+    <li>As a site user, i can view and select specific category of courses.</li>
+    <li>As a site user, i can search for course that interest me by name or description.</li>
+    <li>As a site user, i can view results and results number of what i've searched for.</li>
+    <li>As a site user, i can add the favourite course in the shopping bag.</li>
+    <li>As a site user, i can view alert messages of success, error, warning or info.</li>
+    <li>As a site user, i can easily pay using my card.</li>
+    <li>As a site user, i would like to know that my personal data and payment information are safe.</li>
+    <li>As a site user, i would like to view a confirmation of my purchase.</li>
+    <li>As a site user, i would like to receive an confirmation on email after purchase.</li>
+    <li>As a site user, i would like to have an personalized user profile.</li>
+    <li>As a site user, i can add reviews to courses that i went in past.</li>
+    <li>As a site user, i can edit own reviews left to the course pages.</li>
+    <li>As a site user, i can delete own reviews left to course pages.</li>
+    <li>As a site user, i would like to view blog posts.</li>
+    <li>As a site user, i can send a message directly to admin using Contact link.</li>
+    <li>As a site user, i can access Privacy Policy, so I'll know my rights.</li>
+    <li>As a site user, i can checkout the favourite course securely.</li>
+    <li>As a site user, i can access website from desktop, laptop, tablet or mobile phone.</li>
+</ul><hr>
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### **Overall Goals**<hr>
 
-A blue button should appear to click: _Make Public_,
+<ul>
+    <li>Create an E-Commerce Full Stack Web Application that provides online language courses for all type of students, from beginner to businessman.</li>
+    <li>Allow superusers access to full CRUD functionality on reviews / blog posts and courses.</li>
+    <li>To provide to user exactly that they are looking for and be able to answer at any type of queries.</li>
+</ul><hr>
 
-Another blue button should appear to click: _Open Browser_.
+### **Site User / Target Audience / Demographic**<hr>
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+<ul>
+    <li>Target market is aimed at anyone looking to learn English Language.</li>
+    <li>People who needs to change something in their lifes and students.</li>
+    <li>People who are interested of our services.</li>
+</ul><hr>
 
-To log into the Heroku toolbelt CLI:
+### **Site Goals**<hr>
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+<ul>
+    <li>Simple navigation through the website, that allows user to easily find what is looking for.</li>
+    <li>User authentication.</li>
+    <li>CRUD for superusers.</li>
+</ul><hr>
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+# **Achitecture**
+### **Database Schema**<hr>
 
-------
+![Responsive](/media/readme/database-schema.png "Database Schema")<hr>
 
-## Release History
+# **Design**
+### **Mobile Navbar (Wireframe)**
+![Responsive](/media/readme/mobile-navbar.png "Mobile Navbar")<hr>
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### **Home Page (Wireframe)**
+![Responsive](/media/readme/home-page-wfr.png "Home Page")<hr>
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### **About Us Page (Wireframe)**
+![Responsive](/media/readme/about-page-wfr.png "About Page")<hr>
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### **Course Page (Wireframe)**
+![Responsive](/media/readme/course-page-wfr.png "Courses Page")<hr>
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### **Course Detail (Wireframe)**
+![Responsive](/media/readme/course-detail-wfr.png "Courses Detail")<hr>
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### **Blog Page (Wireframe)**
+![Responsive](/media/readme/blog-page-wfr.png "Blog Page")<hr>
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+### **Blog Post (Wireframe)**
+![Responsive](/media/readme/blog-post-wfr.png "Blog Post")<hr>
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+### **Contact Page (Wireframe)**
+![Responsive](/media/readme/contact-page-wfr.png "Contact Page")<hr>
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### **Typography**
+<p>
+The font was obtained from Google Fonts Library.
+<ul>
+<li><strong>Oswald</strong> - Full Website.</li>
+</ul>
+</p><hr>
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+# **Features**
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### **Home Page**
+![Responsive](/media/readme/home-page.png "Home Page")<hr>
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### **About Us Page**
+![Responsive](/media/readme/about-page.png "About Page")<hr>
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### **Courses Page**
+![Responsive](/media/readme/course-page.png "Courses Page")<hr>
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### **Course Detail Page**
+![Responsive](/media/readme/course-detail.png "Course Detail Page")<hr>
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### **Blog Page**
+![Responsive](/media/readme/blog-page.png "Blog Page")<hr>
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### **Blog Post**
+![Responsive](/media/readme/blog-post.png "Blog Post")<hr>
 
-------
+### **Contact Page**
+![Responsive](/media/readme/contact-page.png "Contact Page")<hr>
 
-## FAQ about the uptime script
+### **My Profile Page**
+![Responsive](/media/readme/my-profile-page.png "My Profile Page")<hr>
 
-**Why have you added this script?**
+### **Sign In Page**
+![Responsive](/media/readme/sign-in-page.png "Sign In")<hr>
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+### **Sign Up Page**
+![Responsive](/media/readme/sign-up-page.png "Sign Up")<hr>
 
-**How will this affect me?**
+### **Checkout Page**
+![Responsive](/media/readme/checkout-page.png "Checkout Page")<hr>
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### **Checkout Page 2**
+![Responsive](/media/readme/checkout-page-2.png "Checkout Page 2")<hr>
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+### **Success Order Page**
+![Responsive](/media/readme/success-order.png "Success Order Page")<hr>
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+### **Edit Course Page**
+![Responsive](/media/readme/edit-course-page.png "Edit Course Page")<hr>
 
-**So….?**
+### **Add Course Page**
+![Responsive](/media/readme/add-course-page.png "Add Course Page")<hr>
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+# **Web Marketing / Marketing Strategies**
+![Responsive](/media/readme/SEO.png "SEO")<hr>
 
-**Can I opt out?**
+### **SEO**
+<p>Short-tail and Long-tail are used. Google keyword research was used to optimise web pages and increase raking in search engines.</p><hr>
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+### **Content Marketing**
+<p>Blog posts was created so that the website can create and share content material to attract and convert audience into first time customers and repeat customers.</p><hr>
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+### **Social Media Marketing**
+![Responsive](/media/readme/facebook-1.png "Facebook 1")<hr>
+![Responsive](/media/readme/facebook-2.png "Facebook 1")<hr>
 
-**Anything more?**
+### **Email Marketing**
+<p>Mailchimp is used to gain new customers. Users who register to receive the newsletter are automatic added to weekly newsletter. This strategy help to grow free and fast. The users who sign up have already visited the website and are more likely to become customers.</p>
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+### **Validator Testing**
+<ul>
+<li>HTML files pass through the <a href="https://validator.w3.org/">W3C Validator</a> with not HTML issues.</li>
+<li>CSS file pass through the <a href="https://jigsaw.w3.org/css-validator/">Jigsaw Validator</a> with not CSS issues.</li>
 
----
+![Responsive](/media/readme/CSS-VALIDATOR.png "CSS Validator")<hr>
 
-Happy coding!
+<li>Page has a good Performance on Lighthouse!</li>
+
+![Responsive](/media/readme/lighthouse.png "Lighthouse")<hr>
+
+<li>Python files passed through <a href="http://pep8online.com/">PEP8 Online</a></li>
+</ul><hr>
+
+# **Technologies User**
+
+### **Main Languages Used**
+
+<ul>
+<li>HTML 5</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>Python</li>
+<li>Django</li>
+<li>SQL - Postgres</li>
+</ul><hr>
+
+### **Framerworks, Libraries & Programs User**
+<ul>
+<li>Google Fonts - For the font family.</li>
+<li>Font Awesome - Icons to the social links in the footer side.</li>
+<li>GitPod - HTML,CSS,Python,JavaScript,Django - Workspace.</li>
+<li>GitHub - To store my repository.</li>
+<li>Balsamiq - Wireframes App.</li>
+<li>Am I Responsive? - To make sure that project looks good to all devices.</li>
+<li>Bootstrap</li>
+<li>elephantSQL</li>
+<li>DrawSQL</li>
+</ul><hr>
+
+
+### **Stripe**
+<ul>
+    <li>Register for an account at www.stripe.com</li>
+    <li>Go to "Developers" once logged in.</li>
+    <li>Go to API keys section.</li>
+    <li>Note the publishable and secret keys.</li>
+    <li>In your local environment file and Heroku create environments variables STRIPE_PUBLIC_KEY and STRIPE_SECRET_KEY with the publishable and secret key values os.environ.setdefault('STRIPE_PUBLIC_KEY', 'YOUR_VALUE_GOES_HERE') os.environ.setdefault('STRIPE_SECRET_KEY', 'YOUR_VALUE_GOES_HERE')</li>
+    <li>Back in Developers section of your stripe account click on Webhooks</li>
+    <li>Create an webhook with the url of your website + /checkout/wh/</li>
+    <li>Select all events</li>
+    <li>Note the key created for this webhook.</li>
+    <li>In your local environment file and Heroku, create environment variable STRIPE_WH_SECRET with the secret values os.environ.setdefault('STRIPE_WH_SECRET', 'YOUR_VALUE_GOES_HERE')</li>
+    <li>Test the webhook and note the success/fail attempts.</li>
+</ul>
+
+
+# **Credits**
+<ul>
+<li><a href="https://codeinstitute.net/">Code Institute</a> - for all course material leading up to this project.</li>
+<li><a href="https://github.com/SephTheOverwitch">Martina Terlevic</a> -  My mentor at Code Institute for permanently support and feedback.</li>
+<li>Code Institute Tututor Team - For help during the lessons and challenges</li>
+</ul>
+
+
