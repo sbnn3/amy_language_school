@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://amy-language-school.herokuapp.com/sitemap.xml
