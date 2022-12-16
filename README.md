@@ -27,11 +27,10 @@ This website is for educational purposes only and the credit card payment functi
 <li><a href="#user-stories">User Stories</a></li>
 <li><a href="#design">Design</a></li>
 <li><a href="#features">Features</a></li>
-<li><a href="#testing">Testing</a></li>
-<li><a href="#unfixed-bugs">Unfixed Bugs</a></li>
+<li><a href="#Validator Testing">Testing</a></li>
 <li><a href="#technologies-user">Technologies User</a></li>
 <li><a href="#deployment">Deployment</a></li>
-<li><a href="#credits">Credits</a></li>
+<li><a href="#Credits & Acknowledgements">Credits</a></li>
 <ul><hr>
 
 # **UX**
