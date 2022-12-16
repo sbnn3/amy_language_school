@@ -17,7 +17,7 @@
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
       <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="{% static 'css/base.css' %}">
-      <link rel="icon" type="image/x-icon" href="media/favicon.ico">
+      <link rel="icon" type="image/x-icon" href="{{ MEDIA_URL }}favicon.ico">
     {% endblock %}
 
     {% block extra_css %}
@@ -42,7 +42,7 @@
       <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
           <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
             <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                <h2 class="logo-font text-black my-0"> <strong>AMY</strong> <span><img src="/media/opened_book.jpg"></span> Language School</h2>
+                <h2 class="logo-font text-black my-0"> <strong>AMY</strong> <span><img src="{{ MEDIA_URL }}opened_book.jpg"></span> Language School</h2>
             </a>
           </div>
           <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
