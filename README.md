@@ -27,10 +27,10 @@ This website is for educational purposes only and the credit card payment functi
 <li><a href="#user-stories">User Stories</a></li>
 <li><a href="#design">Design</a></li>
 <li><a href="#features">Features</a></li>
-<li><a href="#Validator Testing">Testing</a></li>
+<li><a href="#testing">Testing</a></li>
 <li><a href="#technologies-user">Technologies User</a></li>
 <li><a href="#deployment">Deployment</a></li>
-<li><a href="#Credits & Acknowledgements">Credits</a></li>
+<li><a href="#credits">Credits</a></li>
 <ul><hr>
 
 # **UX**
@@ -197,7 +197,7 @@ The font was obtained from Google Fonts Library.
 ### **Email Marketing**
 <p>Mailchimp is used to gain new customers. Users who register to receive the newsletter are automatic added to weekly newsletter. This strategy help to grow free and fast. The users who sign up have already visited the website and are more likely to become customers.</p>
 
-### **Validator Testing**
+### **Testing**
 <ul>
 <li>HTML files pass through the <a href="https://validator.w3.org/">W3C Validator</a> with not HTML issues.</li>
 <li>CSS file pass through the <a href="https://jigsaw.w3.org/css-validator/">Jigsaw Validator</a> with not CSS issues.</li>
@@ -392,7 +392,7 @@ The font was obtained from Google Fonts Library.
 </ul><hr>
 
 
-# **Credits & Acknowledgements**
+# **Credits**
 <ul>
 <li><a href="https://codeinstitute.net/">Code Institute</a> - for all course material leading up to this project.</li>
 <li><a href="https://github.com/SephTheOverwitch">Martina Terlevic</a> -  My mentor at Code Institute for permanently support and feedback.</li>
