@@ -202,15 +202,14 @@ The font was obtained from Google Fonts Library.
 <ul>
 <li>HTML files pass through the <a href="https://validator.w3.org/">W3C Validator</a> with not HTML issues.</li>
 <li>CSS file pass through the <a href="https://jigsaw.w3.org/css-validator/">Jigsaw Validator</a> with not CSS issues.</li>
+<li>JS Hint - I've checked JS files with JS Hint for conformity.</li>
+<li>Python - I've used autopep8 to validate all Python and checked with Flake 8.</li>
 
 ![Responsive](/media/readme/CSS-VALIDATOR.png "CSS Validator")<hr>
 
 <li>Page has a good Performance on Lighthouse!</li>
 
 ![Responsive](/media/readme/lighthouse.png "Lighthouse")<hr>
-
-<li>Python files passed through <a href="http://pep8online.com/">PEP8 Online</a></li>
-</ul><hr>
 
 # **Technologies User**
 
@@ -238,6 +237,87 @@ The font was obtained from Google Fonts Library.
 <li>DrawSQL</li>
 </ul><hr>
 
+### **Manual Testing**
+<table>
+    <tr>
+        <th>Feature</th>
+        <th>Test</th>
+        <th>Excepted Result</th>
+        <th>Result</th>
+    </tr>
+    <tr>
+        <td>Logo</td>
+        <td>Selection Logo for website</td>
+        <td>Redirect users to homepage</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Navigation Links</td>
+        <td>Access Navigation Links</td>
+        <td>Redirect users to different pages</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Add Course</td>
+        <td>Add a new course on the courses page using Course Management</td>
+        <td>Succesfully adds the course</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Editing Course</td>
+        <td>Edit an existing course using edit function as superuser</td>
+        <td>Successfully edited</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Delete Course</td>
+        <td>Delete an existing course using delete function as superuser</td>
+        <td>Successfully deleted</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Checkout a course</td>
+        <td>Receive purchase confirmation</td>
+        <td>Succesfully purchased</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Login</td>
+        <td>Login into account</td>
+        <td>Succesfully Log in</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Register</td>
+        <td>Create a new account</td>
+        <td>Succesfully Registered</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Contact Form</td>
+        <td>Send a message using contact form</td>
+        <td>Message Received in Admin Panel.</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Email Confirmation</td>
+        <td>After checkout needs to receive email confirmation</td>
+        <td>Email received</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Course Review</td>
+        <td>Leave a review at course pages</td>
+        <td>The review has been posted</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Course Review Edit/Delete</td>
+        <td>Edit or/and Delete the written review</td>
+        <td>The review has been edited or/and deleted</td>
+        <td>Pass</td>
+    </tr>
+</table><hr>
 
 ### **Stripe**
 <ul>
@@ -254,12 +334,71 @@ The font was obtained from Google Fonts Library.
     <li>Test the webhook and note the success/fail attempts.</li>
 </ul>
 
+### **Deployment**
+<ul>
+<li>Log in to Heroku or create an account</li>
+<li>On the main page click "New" and "Create New App"</li>
+<li>New app name must be unique</li>
+<li>Select your region, i've selected "Europe"</li>
+<li>Click "Create app" button</li>
+<li>Click "Settings" on Heroku menu</li>
+<li>Click "Reveal Config Vars" and add "SECRET_KEY"</li>
+<li>Click "Reveal Config Vars" and add "DISABLE_COLLECTSTATIC=1"</li>
+<li>Scroll to the top of page and select "Deploy"</li>
+<li>Select GitHub as deployment method</li>
+<li>Connect your GitHub account there</li>
+<li>Search the repository name and click the connect button</li>
+<li>Deploy</li>
+</ul><hr>
 
-# **Credits**
+### **Migrating Databases**
+<ul>
+<li>Creating a database</li>
+<li>Login to elephantSQL.com to access your dashboard</li>
+<li>Click "Create New Instance"</li>
+<li>Set up the plan</li>
+<li>Select Region</li>
+<li>Click "Review"</li>
+<li>Click "Create Instance"</li>
+<li>Return to dashboard and click on the database instance name for the project</li>
+</ul><hr>
+
+### **Migrating your data**
+<ul>
+<li>Navigate to the Postgres Migration Tool repo on github in a new browser tab</li>
+<li>Click the Gitpod button to open a new workspace</li>
+<li>Run the script " python3 reel2reel.py" command in the terminal</li>
+<li>In a different browser tab, go to your app in Heroku and select the Settings tab</li>
+<li>Click the “Reveal Config Vars” button</li>
+<li>Copy the value in the DATABASE_URL Config Var. It will start with postgres://</li>
+<li>Return to Gitpod and paste in the URL you just copied into the terminal where prompted to provide your DATABASE_URL and click enter</li>
+<li>In your original browser tab, get your ElephantSQL database URL. Again, it will start with postgres://</li>
+<li>Return to Gitpod and paste in the URL where prompted</li>
+<li>The data will now be downloaded from Heroku and uploaded to your ElephantSQL database</li>
+<li>To test that your database has been moved successfully, return to ElephantSQL and select BROWSER</li>
+<li>Click the “Table queries” button. If you see any options in the dropdown, your tables have been created</li>
+<li>Select a table name you recognise, and then click “Execute”</li>
+<li>You should see your data displayed relating to the table you selected</li>
+</ul><hr>
+
+### **Connecting ElephantSQL database to Heroku**
+<ul>
+<li>In the Heroku Dashboard for your project, open the Resources tab</li>
+<li>In the Resources tab, remove the existing Postgres add-on:</li>
+<li>Confirm by typing in the name of your Heroku app when prompted.</li>
+<li>Navigate to the Settings tab</li>
+<li>Reveal your existing Config Vars. The original DATABASE_URL should have been deleted when the add-on was removed.</li>
+<li>Add a new config var called DATABASE_URL and paste in the value for your ElephantSQL database, and click Add to save it.</li>
+<li>Check the Activity tab to confirm</li>
+</ul><hr>
+
+
+# **Credits & Acknowledgements**
 <ul>
 <li><a href="https://codeinstitute.net/">Code Institute</a> - for all course material leading up to this project.</li>
 <li><a href="https://github.com/SephTheOverwitch">Martina Terlevic</a> -  My mentor at Code Institute for permanently support and feedback.</li>
-<li>Code Institute Tututor Team - For help during the lessons and challenges</li>
+<li>Code Institute Tututor Team - For help during the lessons and challenges.</li>
+<li>This Project is for Educational Use Only and was created for the Code Institute Module.</li>
 </ul>
 
 
