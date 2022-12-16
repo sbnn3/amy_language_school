@@ -9,7 +9,7 @@ class Author(models.Model):
     Blog Post Author
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    profile_picture = models.ImageField()
+    profile_picture = models.ImageField(null=True, blank=True)
 
     def __str__(self):
         return self.user.username
@@ -22,7 +22,7 @@ class Category(models.Model):
     title = models.CharField(max_length=20)
     subtitle = models.CharField(max_length=20)
     slug = models.SlugField()
-    image = models.ImageField()
+    image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
         return self.title
@@ -38,7 +38,7 @@ class Post(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True)
     content = models.TextField()
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
-    image = models.ImageField()
+    image = models.ImageField(null=True, blank=True)
     categories = models.ManyToManyField(Category)
     featured = models.BooleanField()
 
